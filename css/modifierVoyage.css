@@ -1,0 +1,94 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.title{
+    text-align: center;
+}
+
+.rubrique {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.titreRubrique {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.gallery {
+    --g: 4px;
+    display: grid;
+    clip-path: inset(1px);
+}
+  
+.gallery > img {
+    border-radius: 250px;
+    --_p: calc(-1 * var(--g));
+    grid-area: 1/1;
+    width: 250px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.4s 0.1s;
+}
+  
+.gallery > img:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
+}
+  
+.gallery > img:last-child {
+    clip-path: polygon(
+      100% 100%,
+      100% calc(0% - var(--_p)),
+      calc(0% - var(--_p)) 100%);
+}
+  
+.gallery:hover > img:last-child,
+.gallery:hover > img:first-child:hover {
+    --_p: calc(50% - var(--g));
+}
+  
+.gallery:hover > img:first-child,
+.gallery:hover > img:first-child:hover + img {
+    --_p: calc(-50% - var(--g));
+}
+
+.textVille1 {
+    width: 70%;
+    position: absolute;
+    bottom: 240px;
+    left: 250px;
+}
+  
+.textVille2 {
+    position: absolute;
+    left: 260px;
+    bottom: 160px;
+    width: 70%;
+}
+  
+.textVille3 {
+    position: absolute;
+    left: 250px;
+    bottom: 80px;
+    width: 70%;
+}
+
+.input-field{
+    border: none;
+    outline: none;
+}
+
+textarea{
+    border: none;
+    outline: none;
+    resize: none;   
+}

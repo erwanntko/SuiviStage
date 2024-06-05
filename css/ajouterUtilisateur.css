@@ -1,0 +1,183 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.title {
+  position: relative;
+}
+
+.inscription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper2 {
+  margin: 0 auto;
+  width: 50%;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.wrapper2 h1 {
+  padding-top: 5%;
+  padding-bottom: 7%;
+  color: #000;
+  font-size: 36px;
+  text-align: center;
+}
+
+.wrapper2 .input-box {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.wrapper2 .btn {
+  width: 50%;
+  height: 45px;
+  background: #fff;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  position: absolute;
+  bottom: -3.7%;
+  left: 25%;
+}
+
+.wrapper2 .btn:hover {
+  background-color: #eae7e7;
+}
+
+.register {
+  width: 100%;
+}
+
+.input-box input,
+.input-box label {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.input-box input {
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px;
+  font-size: 16px;
+  color: #000;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.input-box label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #a21491;
+  text-align: left;
+}
+
+.input1-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input1-box input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 5px;
+  transform: scale(1.5);
+  height: 15px;
+}
+
+.input1-box label {
+  display: inline-block;
+  color: black;
+}
+
+.input-box i {
+  color: black;
+  position: absolute;
+  font-size: 20px;
+}
+
+.input-box p {
+  color: black;
+}
+
+.nom {
+  margin-bottom: 5px;
+}
+
+.nom-role {
+  margin-top: 20px;
+}
+
+.toggle-buttons {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.toggle-btn {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.toggle-btn.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.erorr {
+  margin-top: 10px;
+  display: none;
+  text-align: center;
+  color: red !important; 
+}
+
+.erorrUsernameKeep {
+  text-align: center;
+  color: red;  
+}
+
+#divAjouterUtilisateur {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  max-height: 80vh; /* Hauteur maximale à 80% de la hauteur de la fenêtre */
+  background: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: none; /* Caché par défaut */
+  z-index: 1000; /* Au-dessus du contenu principal */
+  overflow-y: auto; /* Ajouter un défilement si le contenu dépasse la hauteur */
+}

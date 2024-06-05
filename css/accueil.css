@@ -1,0 +1,256 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.catalogueDirector {
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.title {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 5vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.column {
+    margin: 10px;
+    text-align: center;
+}
+
+.pays {
+    width: 220px;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: grab;
+}
+
+.pays:hover {
+    opacity: 0.7;
+}
+
+.deletePays{
+    background-color: #0091ff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.iconDeletePays{
+    width: 20px; 
+    height: 20px; 
+    filter: invert(100%);
+}
+
+.addVoyageButton{
+    background-color: #0091ff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.voyageButtonDiv{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin-left: 93%;
+}
+
+.rubrique {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 1px solid rgb(202, 199, 199);
+}
+
+.titreRubrique {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.gallery {
+    --g: 4px;
+    display: grid;
+    clip-path: inset(1px);
+}
+  
+.gallery > img {
+    border-radius: 250px;
+    --_p: calc(-1 * var(--g));
+    grid-area: 1/1;
+    width: 250px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.4s 0.1s;
+}
+  
+.gallery > img:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
+}
+  
+.gallery > img:last-child {
+    clip-path: polygon(
+      100% 100%,
+      100% calc(0% - var(--_p)),
+      calc(0% - var(--_p)) 100%);
+}
+  
+.gallery:hover > img:last-child,
+.gallery:hover > img:first-child:hover {
+    --_p: calc(50% - var(--g));
+}
+  
+.gallery:hover > img:first-child,
+.gallery:hover > img:first-child:hover + img {
+    --_p: calc(-50% - var(--g));
+}
+
+.text_ville_1 {
+    width: 70%;
+    position: absolute;
+    bottom: 240px;
+    left: 250px;
+}
+  
+.text_ville_2 {
+    position: absolute;
+    left: 260px;
+    bottom: 160px;
+    width: 70%;
+}
+  
+.text_ville_3 {
+    position: absolute;
+    left: 250px;
+    bottom: 80px;
+    width: 70%;
+}
+
+.editVille{
+    position: absolute;
+    left: 92.5%;
+    top: 208px; 
+    background-color: #0091ff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.deleteVille{
+    position: absolute;
+    left: 86%;
+    top: 270px;
+    background-color: #0091ff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.reserverVol{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #0091ff;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.iconDeleteVille{
+    width: 30px; 
+    height: 30px; 
+    filter: invert(100%);
+}
+
+.iconEditVille{
+    width: 60px; 
+    height: 30px; 
+    filter: invert(100%);
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.blur-background {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.close {
+    color: #aaa;
+    cursor: pointer;
+}   
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.closeButton {
+    position: fixed;
+    background: red;
+    right: 1%;
+    top: 2%;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;    
+    line-height: 25px;
+    z-index: 1001;
+}

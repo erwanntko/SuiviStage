@@ -1,0 +1,48 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    text-align: center;
+    height: 100%;
+}
+
+.texteAccroche {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    font-size: 5vh;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.flex-container label {
+    margin-right: 10px;
+}
+
+.flex-container input, .flex-container select {
+    flex: 1;
+}
+
+#divAjouterVoyage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    max-height: 80vh; /* Hauteur maximale à 80% de la hauteur de la fenêtre */
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: none; /* Caché par défaut */
+    z-index: 1000; /* Au-dessus du contenu principal */
+    overflow-y: auto; /* Ajouter un défilement si le contenu dépasse la hauteur */
+}
+
